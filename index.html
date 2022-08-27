@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS y JavaScript-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+
+    <!-- css y js personalizados-->
+    <link rel="STYLESHEET" type="text/css" href="css/styles.css">
+
+    <title>Ajedrez</title>
+</head>
+<body>
+    <div class="row">
+        <div id="tablero" class="col-6 tbl_on">
+            <div class="row" data-masonry='{"percentPosition": true }'> <!--Contenedor de hilera-->
+                <div id="c_1_1" class="col-1 casillero casillero_vacio" onclick="acc(1,1)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" class="ficha" id="f_1_1">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_1_2" class="col-1 casillero casillero_vacio" onclick="acc(1,2)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_1_2">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_1_3" class="col-1 casillero casillero_vacio" onclick="acc(1,3)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_1_3">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_1_4" class="col-1 casillero casillero_vacio" onclick="acc(1,4)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt="" class="ficha" id="f_1_4">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_1_5" class="col-1 casillero casillero_vacio" onclick="acc(1,5)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_1_5">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_1_6" class="col-1 casillero casillero_vacio" onclick="acc(1,6)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_1_6">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_1_7" class="col-1 casillero casillero_vacio" onclick="acc(1,7)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt="" class="ficha" id="f_1_7">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_1_8" class="col-1 casillero casillero_vacio" onclick="acc(1,8)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_1_8">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+            </div>
+
+            <div class="row" data-masonry='{"percentPosition": true }'> <!--Contenedor de hilera-->
+                <div id="c_2_1" class="col-1 casillero casillero_vacio" onclick="acc(2,1)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_2_1">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo" class="fondo">
+                </div>
+                <div id="c_2_2" class="col-1 casillero casillero_vacio" onclick="acc(2,2)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_2_2">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_2_3" class="col-1 casillero casillero_vacio" onclick="acc(2,3)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_2_3">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_2_4" class="col-1 casillero casillero_vacio" onclick="acc(2,4)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_2_4">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_2_5" class="col-1 casillero casillero_vacio" onclick="acc(2,5)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_2_5">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_2_6" class="col-1 casillero casillero_vacio" onclick="acc(2,6)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_2_6">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_2_7" class="col-1 casillero casillero_vacio" onclick="acc(2,7)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_2_7">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_2_8" class="col-1 casillero casillero_vacio" onclick="acc(2,8)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_2_8">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+            </div>
+
+            <div class="row" data-masonry='{"percentPosition": true }'> <!--Contenedor de hilera-->
+                <div id="c_3_1" class="col-1 casillero casillero_vacio" onclick="acc(3,1)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_3_1">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_3_2" class="col-1 casillero casillero_vacio" onclick="acc(3,2)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_3_2">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_3_3" class="col-1 casillero casillero_vacio" onclick="acc(3,3)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_3_3">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_3_4" class="col-1 casillero casillero_vacio" onclick="acc(3,4)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_3_4">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_3_5" class="col-1 casillero casillero_vacio" onclick="acc(3,5)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_3_5">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_3_6" class="col-1 casillero casillero_vacio" onclick="acc(3,6)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_3_6">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_3_7" class="col-1 casillero casillero_vacio" onclick="acc(3,7)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_3_7">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_3_8" class="col-1 casillero casillero_vacio" onclick="acc(3,8)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_3_8">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+            </div>
+
+            <div class="row" data-masonry='{"percentPosition": true }'> <!--Contenedor de hilera-->
+                <div id="c_4_1" class="col-1 casillero casillero_vacio" onclick="acc(4,1)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_4_1">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_4_2" class="col-1 casillero casillero_vacio" onclick="acc(4,2)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_4_2">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_4_3" class="col-1 casillero casillero_vacio" onclick="acc(4,3)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_4_3">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_4_4" class="col-1 casillero casillero_vacio" onclick="acc(4,4)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_4_4">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_4_5" class="col-1 casillero casillero_vacio" onclick="acc(4,5)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_4_5">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_4_6" class="col-1 casillero casillero_vacio" onclick="acc(4,6)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_4_6">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_4_7" class="col-1 casillero casillero_vacio" onclick="acc(4,7)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_4_7">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_4_8" class="col-1 casillero casillero_vacio" onclick="acc(4,8)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_4_8">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+            </div>
+
+            <div class="row" data-masonry='{"percentPosition": true }'> <!--Contenedor de hilera-->
+                <div id="c_5_1" class="col-1 casillero casillero_vacio" onclick="acc(5,1)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_5_1">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_5_2" class="col-1 casillero casillero_vacio" onclick="acc(5,2)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_5_2">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_5_3" class="col-1 casillero casillero_vacio" onclick="acc(5,3)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_5_3">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_5_4" class="col-1 casillero casillero_vacio" onclick="acc(5,4)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_5_4">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_5_5" class="col-1 casillero casillero_vacio" onclick="acc(5,5)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_5_5">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_5_6" class="col-1 casillero casillero_vacio" onclick="acc(5,6)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_5_6">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_5_7" class="col-1 casillero casillero_vacio" onclick="acc(5,7)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_5_7">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_5_8" class="col-1 casillero casillero_vacio" onclick="acc(5,8)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_5_8">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+            </div>
+
+            <div class="row" data-masonry='{"percentPosition": true }'> <!--Contenedor de hilera-->
+                <div id="c_6_1" class="col-1 casillero casillero_vacio" onclick="acc(6,1)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_6_1">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_6_2" class="col-1 casillero casillero_vacio" onclick="acc(6,2)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_6_2">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_6_3" class="col-1 casillero casillero_vacio" onclick="acc(6,3)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_6_3">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_6_4" class="col-1 casillero casillero_vacio" onclick="acc(6,4)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_6_4">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_6_5" class="col-1 casillero casillero_vacio" onclick="acc(6,5)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_6_5">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_6_6" class="col-1 casillero casillero_vacio" onclick="acc(6,6)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_6_6">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>o_vacio
+                <div id="c_6_7" class="col-1 casillero casillero_vacio" onclick="acc(6,7)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_6_7">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_6_8" class="col-1 casillero casillero_vacio" onclick="acc(6,8)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_6_8">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+            </div>
+
+            <div class="row" data-masonry='{"percentPosition": true }'> <!--Contenedor de hilera-->
+                <div id="c_7_1" class="col-1 casillero casillero_vacio" onclick="acc(7,1)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_7_1">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_7_2" class="col-1 casillero casillero_vacio" onclick="acc(7,2)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_7_2">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_7_3" class="col-1 casillero casillero_vacio" onclick="acc(7,3)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_7_3">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_7_4" class="col-1 casillero casillero_vacio" onclick="acc(7,4)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_7_4">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_7_5" class="col-1 casillero casillero_vacio" onclick="acc(7,5)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_7_5">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_7_6" class="col-1 casillero casillero_vacio" onclick="acc(7,6)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_7_6">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_7_7" class="col-1 casillero casillero_vacio" onclick="acc(7,7)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_7_7">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_7_8" class="col-1 casillero casillero_vacio" onclick="acc(7,8)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_7_8">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+            </div>
+
+            <div class="row" data-masonry='{"percentPosition": true }'> <!--Contenedor de hilera-->
+                <div id="c_8_1" class="col-1 casillero casillero_vacio" onclick="acc(8,1)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_8_1">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_8_2" class="col-1 casillero casillero_vacio" onclick="acc(8,2)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_8_2">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_8_3" class="col-1 casillero casillero_vacio" onclick="acc(8,3)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_8_3">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_8_4" class="col-1 casillero casillero_vacio" onclick="acc(8,4)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_8_4">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_8_5" class="col-1 casillero casillero_vacio" onclick="acc(8,5)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_8_5">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_8_6" class="col-1 casillero casillero_vacio" onclick="acc(8,6)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_8_6">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_8_7" class="col-1 casillero casillero_vacio" onclick="acc(8,7)"><!--Casillero claro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_8_7">
+                    <img src="img/tbl_c_2.png" alt=""  class="fondo">
+
+                </div>
+                <div id="c_8_8" class="col-1 casillero casillero_vacio" onclick="acc(8,8)"><!--Casillero oscuro-->
+                    <img src="img/empty.png" alt=""  class="ficha" id="f_8_8">
+                    <img src="img/tbl_c_1.png" alt=""  class="fondo">
+                </div>
+            </div>
+            <div class="monitor">
+                <label for="usr_b">
+                    <img src="img/fch_b_peon.png" alt="Peon" class="iconUsr">
+                </label>
+                <input type="text" id="usr_b" name="usr_b" disabled>
+                <input type="text" id="usr_b_IA" hidden>
+                <div class="btn-group" style="left:20%">
+                    <button type="button" class="btn btn-primary" id="btn_usr_b_Us" onClick="selecUserIA('b','Us')">User</button>
+                    <button type="button" class="btn btn-primary" id="btn_usr_b_IA" onClick="selecUserIA('b','IA')">IA</button>
+                </div>
+                <br>
+
+                <label for="usr_n">
+                    <img src="img/fch_n_peon.png" alt="Peon" class="iconUsr">
+                </label>
+                <input type="text" id="usr_n" name="usr_n" disabled>
+                <input type="text" id="usr_n_IA" hidden>
+                <div class="btn-group" style="left:20%">
+                    <button type="button" class="btn btn-primary" id="btn_usr_n_Us" onClick="selecUserIA('n','Us')">User</button>
+                    <button type="button" class="btn btn-primary" id="btn_usr_n_IA" onClick="selecUserIA('n','IA')">IA</button>
+                </div>
+                <br><br>
+
+                <button type="button" id="iniP" class="btn  btn-success" onclick="iniciarPartida()">Iniciar</button>
+                <br>
+
+                <div style="display: none;">
+                    <input id="mon_turno" type="text" value="b"><br>
+                    <input id="mon_movim" type="text" value="origen"><br>
+                    <input id="mon_ori_ficha" type="text">
+                    <input id="mon_ori_f" type="number">
+                    <input id="mon_ori_c" type="number"><br>
+                    <input id="mon_tablas" type="number">
+                    <input id="mon_jaque_a" type="text"><br><br><br><br><br>
+                    <input type="button" onclick="test()">
+                    <div id="testVs"></div>
+                </div>
+            </div>
+            <div id="mensaje" class="banner msg"></div>
+            <div id="mensajeF" class="banner msgF">Bienvenidos!!</div>
+            
+        </div>
+    </div>
+    
+
+    <script src="js/logica.js"></script>
+
+</body>
+</html>
